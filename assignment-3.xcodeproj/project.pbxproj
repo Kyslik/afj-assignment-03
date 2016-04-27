@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		506A88BE1CD14C6000B9CAAD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 506A88BD1CD14C6000B9CAAD /* main.c */; };
 		506A88C61CD1503300B9CAAD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506A88C51CD1503300B9CAAD /* main.cpp */; };
+		506A88CB1CD166B600B9CAAD /* flexing_file.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 506A88CA1CD1667200B9CAAD /* flexing_file.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,6 +19,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				506A88CB1CD166B600B9CAAD /* flexing_file.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +40,7 @@
 		506A88BD1CD14C6000B9CAAD /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		506A88C31CD1503300B9CAAD /* BracketyWord */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BracketyWord; sourceTree = BUILT_PRODUCTS_DIR; };
 		506A88C51CD1503300B9CAAD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		506A88CA1CD1667200B9CAAD /* flexing_file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flexing_file.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 			children = (
 				506A88BD1CD14C6000B9CAAD /* main.c */,
 				506A88B41CD1439800B9CAAD /* assignment-3.l */,
+				506A88CA1CD1667200B9CAAD /* flexing_file.txt */,
 			);
 			path = "assignment-3";
 			sourceTree = "<group>";

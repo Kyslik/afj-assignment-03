@@ -35,8 +35,8 @@
 
     #define SLROUNDB    32
     #define SRROUNDB    33
-    #define SRB         34
-    #define SLB         35
+    #define SLB         34
+    #define SRB         35
     #define STWODOTS    36
     #define SDOT        37
     #define SCOMMA      38
@@ -45,6 +45,7 @@
 
     #define IDENTIFIER  41
     #define CONSTANT    42
+    #define NADA        43
 
     #define CONSTINT    1
     #define CONSTREAL   2
@@ -53,6 +54,9 @@
     int type;
     void t(int t);
 %}
+
+ID      [[:alpha:]][[:alnum:]]*
+
 
 %%
 [ \t\r\n\f]+                            {}
@@ -72,6 +76,42 @@
 [Aa][Rr][Rr][Aa][Yy]                    {t(0); return KWARRAY;}
 [Oo][Ff]                                {t(0); return KWOF;}
 [Rr][Ee][Cc][Oo][Rr][Dd]                {t(0); return KWRECORD;}
+
+
+"+"                                     {t(0); return OPLUS;}
+"-"                                     {t(0); return OMINUS;}
+"*"                                     {t(0); return OMULTIPLY;}
+"/"                                     {t(0); return ODIVIDE;}
+[Mm][Oo][Dd]                            {t(0); return OMOD;}
+[Aa][Nn][Dd]                            {t(0); return OAND;}
+[Oo][Rr]                                {t(0); return OOR;}
+[Nn][Oo][Tt]                            {t(0); return ONOT;}
+"<"                                     {t(0); return OLT;}
+"<="                                    {t(0); return OLE;}
+">"                                     {t(0); return OGT;}
+">="                                    {t(0); return OGE;}
+"="                                     {t(0); return OEQ;}
+"<>"                                    {t(0); return ONE;}
+":="                                    {t(0); return OASSIGNMENT;}
+
+"("                                     {t(0); return SLROUNDB;}
+")"                                     {t(0); return SRROUNDB;}
+"["                                     {t(0); return SLB;}
+"]"                                     {t(0); return SRB;}
+".."                                    {t(0); return STWODOTS;}
+"."                                     {t(0); return SDOT;}
+","                                     {t(0); return SCOMMA;}
+";"                                     {t(0); return SSEMICOLON;}
+":"                                     {t(0); return SCOLON;}
+
+[+-]?[[:digit:]]+                       {t(CONSTINT); return CONSTANT;}
+[+-]?[[:digit:]]+"."[[:digit:]]         {t(CONSTREAL); return CONSTANT;}
+true|false                              {t(CONSTBOOL); return CONSTANT;}
+
+{ID}                                    {t(0); return IDENTIFIER;}
+
+.                                       {t(0); return NADA;}
+
 %%
 
 void t(int t)
