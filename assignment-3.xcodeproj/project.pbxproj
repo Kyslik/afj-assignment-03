@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		506A88AE1CD1437400B9CAAD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 506A88AD1CD1437400B9CAAD /* main.c */; };
+		506A88BE1CD14C6000B9CAAD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 506A88BD1CD14C6000B9CAAD /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		506A88A81CD1437400B9CAAD /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		506A88AA1CD1437400B9CAAD /* assignment-3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "assignment-3"; sourceTree = BUILT_PRODUCTS_DIR; };
-		506A88AD1CD1437400B9CAAD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		506A88B41CD1439800B9CAAD /* assignment-3.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; lineEnding = 0; path = "assignment-3.l"; sourceTree = "<group>"; };
+		506A88BD1CD14C6000B9CAAD /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +58,8 @@
 		506A88AC1CD1437400B9CAAD /* assignment-3 */ = {
 			isa = PBXGroup;
 			children = (
-				506A88AD1CD1437400B9CAAD /* main.c */,
+				506A88BD1CD14C6000B9CAAD /* main.c */,
+				506A88B41CD1439800B9CAAD /* assignment-3.l */,
 			);
 			path = "assignment-3";
 			sourceTree = "<group>";
@@ -69,6 +71,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 506A88B11CD1437400B9CAAD /* Build configuration list for PBXNativeTarget "assignment-3" */;
 			buildPhases = (
+				506A88B81CD1456B00B9CAAD /* ShellScript */,
 				506A88A61CD1437400B9CAAD /* Sources */,
 				506A88A71CD1437400B9CAAD /* Frameworks */,
 				506A88A81CD1437400B9CAAD /* CopyFiles */,
@@ -113,12 +116,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		506A88B81CD1456B00B9CAAD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/local/bin/zsh;
+			shellScript = "cd ~/Documents/School/2015-2016/SS/AFJ/assignment-3/assignment-3/\nflex -o main.c assignment-3.l";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		506A88A61CD1437400B9CAAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				506A88AE1CD1437400B9CAAD /* main.c in Sources */,
+				506A88BE1CD14C6000B9CAAD /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,14 +227,18 @@
 		506A88B21CD1437400B9CAAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		506A88B31CD1437400B9CAAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
