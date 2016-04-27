@@ -51,19 +51,32 @@
     #define CONSTBOOL   3
 
     int type;
-    void z(void);
+    void t(int t);
 %}
 
 %%
-[ \t\r\n\f]+                {}
-[Bb][Ee][Gg][Ii][Nn]		{z(); return (KWBEGIN);}
-[Ee][Nn][Dd]                {z(); return (KWEND);}
-
+[ \t\r\n\f]+                            {}
+[Bb][Ee][Gg][Ii][Nn]                    {t(0); return KWBEGIN;}
+[Ee][Nn][Dd]                            {t(0); return KWEND;}
+[Ii][Ff]                                {t(0); return KWIF;}
+[Tt][Hh][Ee][Nn]                        {t(0); return KWTHEN;}
+[Ww][Hh][Ii][Ll][Ee]                    {t(0); return KWWHILE;}
+[Dd][Oo]                                {t(0); return KWDO;}
+[Pp][Rr][Oo][Cc][Ee][Dd][Uu][Rr][Ee]    {t(0); return KWPROCEDURE;}
+[Ff][Uu][Nn][Cc][Tt][Ii][Oo][Nn]        {t(0); return KWFUNCTION;}
+[Ii][Nn][Tt][Ee][Gg][Ee][Rr]            {t(0); return KWINTEGER;}
+[Rr][Ee][Aa][Ll]                        {t(0); return KWREAL;}
+[Bb][Oo][Oo][Ll][Ee][Aa][Nn]            {t(0); return KWBOOLEAN;}
+[Tt][Yy][Pp][Ee]                        {t(0); return KWTYPE;}
+[Vv][Aa][Rr]                            {t(0); return KWVAR;}
+[Aa][Rr][Rr][Aa][Yy]                    {t(0); return KWARRAY;}
+[Oo][Ff]                                {t(0); return KWOF;}
+[Rr][Ee][Cc][Oo][Rr][Dd]                {t(0); return KWRECORD;}
 %%
 
-void z(void)
+void t(int t)
 {
-    type = 0;
+    type = t;
 }
 
 int main(void)
@@ -73,7 +86,7 @@ int main(void)
 
     while ((l = yylex()) > 0)
     {
-        printf("%d\t\t\t%d\t\t\t%s\n", l, type, yytext);
+        printf("%d\t\t\t\t%d\t\t\t%s\n", l, type, yytext);
     }
     return 1;
 }
