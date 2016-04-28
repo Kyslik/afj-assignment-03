@@ -106,7 +106,8 @@ ID      [[:alpha:]][[:alnum:]]*
 
 [+-]?[[:digit:]]+                       {t(CONSTINT); return CONSTANT;}
 [+-]?[[:digit:]]+"."[[:digit:]]         {t(CONSTREAL); return CONSTANT;}
-true|false                              {t(CONSTBOOL); return CONSTANT;}
+[Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee]   {t(CONSTBOOL); return CONSTANT;}
+
 
 {ID}                                    {t(0); return IDENTIFIER;}
 

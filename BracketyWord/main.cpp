@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-void generate(std::vector<std::string> &in_words, const std::string &prefix);
+void generate(std::vector<std::string> &in_words, const std::string &prefix, const std::string &type = "0");
 
 int main(void)
 {
@@ -24,17 +24,20 @@ int main(void)
 
     vector<string> operators({"mod", "and", "or", "not"});
 
+    vector<string> booleans({"true", "false"});
+
     generate(key_words, "KW");
     generate(operators, "O");
+    generate(booleans, "", "CONSTBOOL");
 
     return 0;
 }
 
-void generate(std::vector<std::string> &in_words, const std::string &prefix)
+void generate(std::vector<std::string> &in_words, const std::string &prefix, const std::string &type)
 {
     using std::string;
 
-    std::cout << "Generating " << in_words.size() << " words with prefix: " << prefix << std::endl;
+    std::cout << "Generating " << in_words.size() << " words with prefix: " << prefix << ", type: " << type << std::endl;
     for (auto &key_word : in_words)
     {
         string out = "";
@@ -48,7 +51,7 @@ void generate(std::vector<std::string> &in_words, const std::string &prefix)
             out += lower;
             out += "]";
         }
-        out += " {t(0); return " + prefix + key_word + ";}";
+        out += " {t(" + type + "); return " + prefix + key_word + ";}";
         std::cout << out << std::endl;
     }
 
