@@ -45,6 +45,7 @@
 
     #define IDENTIFIER  41
     #define CONSTANT    42
+
     #define NADA        43
 
     #define CONSTINT    1
