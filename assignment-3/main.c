@@ -574,6 +574,7 @@ char *yytext;
 
     #define IDENTIFIER  41
     #define CONSTANT    42
+
     #define NADA        43
 
     #define CONSTINT    1
@@ -582,7 +583,7 @@ char *yytext;
 
     int type;
     void t(int t);
-#line 586 "main.c"
+#line 587 "main.c"
 
 #define INITIAL 0
 
@@ -764,9 +765,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 61 "assignment-3.l"
+#line 62 "assignment-3.l"
 
-#line 770 "main.c"
+#line 771 "main.c"
 
 	if ( !(yy_init) )
 		{
@@ -852,240 +853,240 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 62 "assignment-3.l"
+#line 63 "assignment-3.l"
 {}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 63 "assignment-3.l"
+#line 64 "assignment-3.l"
 {t(0); return KWBEGIN;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 64 "assignment-3.l"
+#line 65 "assignment-3.l"
 {t(0); return KWEND;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 65 "assignment-3.l"
+#line 66 "assignment-3.l"
 {t(0); return KWIF;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 66 "assignment-3.l"
+#line 67 "assignment-3.l"
 {t(0); return KWTHEN;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 67 "assignment-3.l"
+#line 68 "assignment-3.l"
 {t(0); return KWWHILE;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 68 "assignment-3.l"
+#line 69 "assignment-3.l"
 {t(0); return KWDO;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 69 "assignment-3.l"
+#line 70 "assignment-3.l"
 {t(0); return KWPROCEDURE;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 70 "assignment-3.l"
+#line 71 "assignment-3.l"
 {t(0); return KWFUNCTION;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 71 "assignment-3.l"
+#line 72 "assignment-3.l"
 {t(0); return KWINTEGER;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 72 "assignment-3.l"
+#line 73 "assignment-3.l"
 {t(0); return KWREAL;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 73 "assignment-3.l"
+#line 74 "assignment-3.l"
 {t(0); return KWBOOLEAN;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 74 "assignment-3.l"
+#line 75 "assignment-3.l"
 {t(0); return KWTYPE;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 75 "assignment-3.l"
+#line 76 "assignment-3.l"
 {t(0); return KWVAR;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 76 "assignment-3.l"
+#line 77 "assignment-3.l"
 {t(0); return KWARRAY;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 77 "assignment-3.l"
+#line 78 "assignment-3.l"
 {t(0); return KWOF;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 78 "assignment-3.l"
+#line 79 "assignment-3.l"
 {t(0); return KWRECORD;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 81 "assignment-3.l"
+#line 82 "assignment-3.l"
 {t(0); return OPLUS;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 82 "assignment-3.l"
+#line 83 "assignment-3.l"
 {t(0); return OMINUS;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 83 "assignment-3.l"
+#line 84 "assignment-3.l"
 {t(0); return OMULTIPLY;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 84 "assignment-3.l"
+#line 85 "assignment-3.l"
 {t(0); return ODIVIDE;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 85 "assignment-3.l"
+#line 86 "assignment-3.l"
 {t(0); return OMOD;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 86 "assignment-3.l"
+#line 87 "assignment-3.l"
 {t(0); return OAND;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 87 "assignment-3.l"
+#line 88 "assignment-3.l"
 {t(0); return OOR;}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 88 "assignment-3.l"
+#line 89 "assignment-3.l"
 {t(0); return ONOT;}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 89 "assignment-3.l"
+#line 90 "assignment-3.l"
 {t(0); return OLT;}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 90 "assignment-3.l"
+#line 91 "assignment-3.l"
 {t(0); return OLE;}
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 91 "assignment-3.l"
+#line 92 "assignment-3.l"
 {t(0); return OGT;}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 92 "assignment-3.l"
+#line 93 "assignment-3.l"
 {t(0); return OGE;}
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 93 "assignment-3.l"
+#line 94 "assignment-3.l"
 {t(0); return OEQ;}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 94 "assignment-3.l"
+#line 95 "assignment-3.l"
 {t(0); return ONE;}
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 95 "assignment-3.l"
+#line 96 "assignment-3.l"
 {t(0); return OASSIGNMENT;}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 97 "assignment-3.l"
+#line 98 "assignment-3.l"
 {t(0); return SLROUNDB;}
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 98 "assignment-3.l"
+#line 99 "assignment-3.l"
 {t(0); return SRROUNDB;}
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 99 "assignment-3.l"
+#line 100 "assignment-3.l"
 {t(0); return SLB;}
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 100 "assignment-3.l"
+#line 101 "assignment-3.l"
 {t(0); return SRB;}
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 101 "assignment-3.l"
+#line 102 "assignment-3.l"
 {t(0); return STWODOTS;}
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 102 "assignment-3.l"
+#line 103 "assignment-3.l"
 {t(0); return SDOT;}
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 103 "assignment-3.l"
+#line 104 "assignment-3.l"
 {t(0); return SCOMMA;}
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 104 "assignment-3.l"
+#line 105 "assignment-3.l"
 {t(0); return SSEMICOLON;}
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 105 "assignment-3.l"
+#line 106 "assignment-3.l"
 {t(0); return SCOLON;}
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 107 "assignment-3.l"
+#line 108 "assignment-3.l"
 {t(CONSTINT); return CONSTANT;}
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 108 "assignment-3.l"
+#line 109 "assignment-3.l"
 {t(CONSTREAL); return CONSTANT;}
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 109 "assignment-3.l"
+#line 110 "assignment-3.l"
 {t(CONSTBOOL); return CONSTANT;}
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 112 "assignment-3.l"
+#line 113 "assignment-3.l"
 {t(0); return IDENTIFIER;}
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 114 "assignment-3.l"
+#line 115 "assignment-3.l"
 {t(0); return NADA;}
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 116 "assignment-3.l"
+#line 117 "assignment-3.l"
 ECHO;
 	YY_BREAK
-#line 1089 "main.c"
+#line 1090 "main.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2082,7 +2083,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 116 "assignment-3.l"
+#line 117 "assignment-3.l"
 
 
 
