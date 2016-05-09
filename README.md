@@ -5,7 +5,8 @@ Assignment [file](https://github.com/Kyslik/afj-assignment-03/blob/master/assign
 
 ---
 
-BracketyWord program [(main.cpp)](https://github.com/Kyslik/afj-assignment-03/blob/master/BracketyWord/main.cpp) generates brackety words for flex. Its purpose is simply generate "manual work"; see below:
+BracketyWord program [(main.cpp)](https://github.com/Kyslik/afj-assignment-03/blob/master/BracketyWord/main.cpp) generates brackety words for flex.  
+Its purpose is simply do the **manual work**; see below:
 
 ```
 vector<string> key_words({"begin", "end"});
