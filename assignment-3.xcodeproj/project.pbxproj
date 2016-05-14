@@ -182,7 +182,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/local/bin/zsh;
-			shellScript = "cd ~/Documents/School/2015-2016/SS/AFJ/assignment-3/assignment-3/\nflex -o main.c assignment-3.l";
+			shellScript = "cd ~/Documents/School/2015-2016/SS/AFJ/assignment-03/assignment-3/\nflex -o main.c assignment-3.l";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
